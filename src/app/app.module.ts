@@ -6,8 +6,16 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { CountdownComponent } from './countdown/countdown.component';
+import {routing, appRoutingProviders} from './app.routing';
+import { HeaderComponent } from './components/homepage/header/header.component';
+import { CountdownComponent } from './components/homepage/countdown/countdown.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
+import { LocationComponent } from './components/homepage/location/location.component';
+import { RsvpComponent } from './components/rsvp/rsvp.component';
+import { GalleryComponent } from './components/gallery/gallery.component';
+import { BridalPartyComponent } from './components/bridal-party/bridal-party.component';
+import { AccomodationsComponent } from './components/accomodations/accomodations.component';
+import { RegistryComponent } from './components/registry/registry.component';
 
 var firebaseConfig = {
     apiKey: "AIzaSyBH7AQqaXhHr_AqCV3ZQGz6MPmS12EVrHs",
@@ -18,21 +26,31 @@ var firebaseConfig = {
     messagingSenderId: "473457069419"
   };
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CountdownComponent
+    CountdownComponent,
+    HomepageComponent,
+    LocationComponent,
+    RsvpComponent,
+    GalleryComponent,
+    BridalPartyComponent,
+    AccomodationsComponent,
+    RegistryComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule,
+    routing,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
