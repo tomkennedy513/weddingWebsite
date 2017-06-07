@@ -6,8 +6,9 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { CountdownComponent } from './countdown/countdown.component';
+import { HeaderComponent } from './components/homepage/header/header.component';
+import { CountdownComponent } from './components/homepage/countdown/countdown.component';
+import { HomepageComponent } from './components/homepage/homepage.component';
 
 var firebaseConfig = {
     apiKey: "AIzaSyBH7AQqaXhHr_AqCV3ZQGz6MPmS12EVrHs",
@@ -22,7 +23,8 @@ var firebaseConfig = {
   declarations: [
     AppComponent,
     HeaderComponent,
-    CountdownComponent
+    CountdownComponent,
+    HomepageComponent
   ],
   imports: [
     BrowserModule,
