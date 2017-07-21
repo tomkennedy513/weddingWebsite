@@ -1,12 +1,15 @@
-div {
-  display: inline-flex;
-}
+
 
 .picture {
-
+  border-radius: 50%;
+  display: flex;
   float: left;
 }
 
 .about {
 
+}
+
+.name {
+  display: flex;
 }
