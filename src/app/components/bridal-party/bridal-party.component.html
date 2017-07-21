@@ -1,3 +1,6 @@
 <p>
   bridal-party works!
 </p>
+
+<app-member *ngFor="let member of bridalPartyMembers" [name]="member.name" [photoUrl]="member.photoUrl" [aboutParagraph]="member.aboutParagraph"></app-member>
+

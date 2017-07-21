@@ -16,6 +16,7 @@ import { GalleryComponent } from './components/gallery/gallery.component';
 import { BridalPartyComponent } from './components/bridal-party/bridal-party.component';
 import { AccomodationsComponent } from './components/accomodations/accomodations.component';
 import { RegistryComponent } from './components/registry/registry.component';
+import { MemberComponent } from './components/bridal-party/member/member.component';
 
 var firebaseConfig = {
     apiKey: "AIzaSyBH7AQqaXhHr_AqCV3ZQGz6MPmS12EVrHs",
@@ -39,7 +40,8 @@ var firebaseConfig = {
     GalleryComponent,
     BridalPartyComponent,
     AccomodationsComponent,
-    RegistryComponent
+    RegistryComponent,
+    MemberComponent
   ],
   imports: [
     BrowserModule,

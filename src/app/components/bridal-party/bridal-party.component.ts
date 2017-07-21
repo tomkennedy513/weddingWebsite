@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {Member} from "./member/member";
+import {bridalParty} from "../../../assets/bridal-party-members"
+
 
 @Component({
   selector: 'app-bridal-party',
@@ -6,10 +9,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./bridal-party.component.css']
 })
 export class BridalPartyComponent implements OnInit {
+  bridalPartyMembers : [Member];
+  constructor() {
+    this.bridalPartyMembers = bridalParty;
+  }
 
-  constructor() { }
 
   ngOnInit() {
+
   }
 
 }
