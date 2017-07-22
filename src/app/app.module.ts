@@ -14,9 +14,10 @@ import { LocationComponent } from './components/homepage/location/location.compo
 import { RsvpComponent } from './components/rsvp/rsvp.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { BridalPartyComponent } from './components/bridal-party/bridal-party.component';
-import { AccomodationsComponent } from './components/accomodations/accomodations.component';
+import { AccommodationsComponent} from './components/accommodations/accommodations.component';
 import { RegistryComponent } from './components/registry/registry.component';
 import { MemberComponent } from './components/bridal-party/member/member.component';
+import { BoxesComponent } from './components/homepage/boxes/boxes.component';
 
 var firebaseConfig = {
     apiKey: "AIzaSyBH7AQqaXhHr_AqCV3ZQGz6MPmS12EVrHs",
@@ -39,9 +40,10 @@ var firebaseConfig = {
     RsvpComponent,
     GalleryComponent,
     BridalPartyComponent,
-    AccomodationsComponent,
+    AccommodationsComponent,
     RegistryComponent,
-    MemberComponent
+    MemberComponent,
+    BoxesComponent
   ],
   imports: [
     BrowserModule,

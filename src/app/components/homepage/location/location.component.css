@@ -1,0 +1,13 @@
+.detail_subheader{
+  text-decoration: underline;
+  text-align: left;
+}
+
+.info{
+  text-align: left;
+}
+
+.container {
+  width: 300px;
+  border: solid 1px black;
+}
