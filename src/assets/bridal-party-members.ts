@@ -11,7 +11,7 @@ export const bridalParty: [Member] = [
     {
       name: "Best Man: Pete Kennedy",
       photoUrl: "/assets/images/bridal_party_photos/pete.jpg",
-      aboutParagraph: "Pete is my younger brother"
+      aboutParagraph: "Pete is my not so little, litte brother. While in many ways we are complete polar opposites of eachother, we still find a way to get a long and balance each other out. It has been an honor to watch Pete grow up and I am so proud of the man he has become."
     },
     {
         name: "Bridesmaid: Kirstie Walker",
@@ -21,7 +21,7 @@ export const bridalParty: [Member] = [
     {
       name: "Groomsman: Mark Kennedy",
       photoUrl: "/assets/images/bridal_party_photos/mark.jpg",
-      aboutParagraph: "Mark is my youngest brother"
+      aboutParagraph: "Mark is my youngest brother. As I am writing this, Mark is getting ready for his Freshman year at University at Albany. I am so proud of all of his acomplishments thus far and can't wait to see where he goes in life. "
     },
     {
       name: "Bridesmaid: Stephanie Viola",
@@ -31,7 +31,7 @@ export const bridalParty: [Member] = [
     {
       name: "Groomsman: Lars Farber",
       photoUrl: "/assets/images/bridal_party_photos/lars.jpg",
-      aboutParagraph: "Lars is my friend"
+      aboutParagraph: "Lars and I met and became friends my Freshman year in high school. Since then, Lars has remained one of my best friends. Through the years, we've taken countless boat rides and ski trips together, including a road trip to Montreal our freshman year in college. Lars is always up for an adventure and I am so happy that he will be there for my trip down the aisle. "
     },
     {
       name: "Bridesmaid: Maggie Gavin",
@@ -41,7 +41,7 @@ export const bridalParty: [Member] = [
     {
       name: "Groomsman: Dave Cusack",
       photoUrl: "/assets/images/bridal_party_photos/dave.jpg",
-      aboutParagraph: "Dave is my friend"
+      aboutParagraph: "Dave and I have been friends since 9th grade. Dave is a great friend and has always been the one to get the gang together. Some of my favorite memories are from Dave's backyard and the countless nights we've spent hanging out around the fire throwing back some cold ones with the boys. I am so excited to make more amazing memories with Dave and the rest of the gang at my wedding! "
     },
     {
       name: "Bridesmaid: Annie Mcdevitt",
@@ -51,7 +51,7 @@ export const bridalParty: [Member] = [
     {
       name: "Groomsman: Eric Newton",
       photoUrl: "/assets/images/bridal_party_photos/eric.jpg",
-      aboutParagraph: "Eric is my friend"
+      aboutParagraph: "Eric and I go all the way back to 7th grade. From family ski trips to Fourth of July parties at Nana's, Eric and I have been through a lot together and have made some amazing memories. I am so excited to have him by myside on my big day!"
     },
     {
         name: "Bridesmaid: Kori Alzate",
@@ -61,7 +61,7 @@ export const bridalParty: [Member] = [
     {
       name: "Groomsman: Matt Creeron",
       photoUrl: "/assets/images/bridal_party_photos/matt.jpg",
-      aboutParagraph: "Matt is my friend"
+      aboutParagraph: "Matt is one of my best friends and for some reason I can't remember when we met. Regardless, Matt is always the life of the party and is one of the most personable and friendly people that I know. I am so grateful to have someone like him as one of my best friends and I am so excited for him to be one of my groomsman."
     },
     {
         name: "Bridesmaid: Shannen Gorman",
@@ -71,22 +71,22 @@ export const bridalParty: [Member] = [
     {
       name: "Groomsman: Dan Cross",
       photoUrl: "/assets/images/bridal_party_photos/dan.jpg",
-      aboutParagraph: "Dan is my friend"
+      aboutParagraph: "I met Dan through Dave back in 10th grade. Dan and I first formed our friendship over xbox and have going strong ever since. Dan is one of those people who is friends with everyone and I am so happy that I am one of those people! He is such a great guy and I am thrilled to have him in my wedding."
     },
     {
       name: "Usher: Peter Merritt",
       photoUrl: "/assets/images/bridal_party_photos/peter.jpg",
-      aboutParagraph: "Peter is Emily's oldest brother. Despite the 7 year age difference, Emily and Peter are very close. We mainly visit him for his wife Diana's dynamite food and to hang out with his 3 kids, but he's pretty cool too"
+      aboutParagraph: "Peter is Emily's oldest brother. Peter is extremely family oriented and is always focused on getting the Merritt clan together. Emily and I appreciate his always down-to-party attitude and above all his wife Diana's amazing cooking. "
     },
     {
       name: "Usher: Wesley Merritt",
       photoUrl: "/assets/images/bridal_party_photos/wes.jpg",
-      aboutParagraph: "Wes is Emily's second oldest brother. He's my one friend on xbox so we spend a lot of time yelling at eachother through a headset. He's a chill dude."
+      aboutParagraph: "Wes is Emily's second oldest brother. I am pretty sure I talk to Wes more than his sister does as we spend many nights playing xbox together. Wes is such a funny guy and is always so fun to be around!"
     },
     {
       name: "Usher: Adam Merritt",
       photoUrl: "/assets/images/bridal_party_photos/adam.jpg",
-      aboutParagraph: "Adam is the youngest of Emily's brothers. As a fellow software engineer, we have a lot in common and can be found in a corner geeking out with each other during family functions"
+      aboutParagraph: "Adam is the youngest of Emily's brothers. As a fellow software engineer, Adam and I have a lot in common and can often be found in a corner geeking out with each other during Merritt family functions. Even though the rest of the family makes fun of us, I enjoy our conversations and am excited to have him as my brother-in-law. "
     },
     {
       name: "Ring Bearer: PK Merritt",
