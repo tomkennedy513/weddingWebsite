@@ -1,62 +1,22 @@
 <app-header></app-header>
 <img class="welcome_image " src="/assets/images/welcome_image.JPG">
-<app-countdown></app-countdown>
+<!--<app-countdown></app-countdown>-->
 <br>
 
 
 <!-- Page Content -->
 <div class="container">
-  <!-- Projects Row -->
   <div class="row">
-    <app-location class="col-md-4"></app-location>
-    <div class="col-md-4 portfolio-item">
-      <a routerLink="/bridal-party">
-        <img class="img-responsive" src="https://wwcdn.weddingwire.com/wedding/1605001_1610000/1607118/thumbnails/400x400_1366228718652-bridal-party.jpg" alt="">
-      </a>
-      <h3>
-        <a routerLink="/bridal-party">Bridal Party</a>
-      </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div>
-    <div class="col-md-4 portfolio-item">
-      <a routerLink="/accommodations">
-        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-      </a>
-      <h3>
-        <a routerLink="/accommodations">Accommodations</a>
-      </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div>
+    <app-location class="col-md-8 col-md-offset-2"></app-location>
   </div>
-  <!-- /.row -->
 
-  <!-- Projects Row -->
   <div class="row">
-    <div class="col-md-4 portfolio-item">
-      <a routerLink="/rsvp">
-        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-      </a>
-      <h3>
-        <a routerLink="/rsvp">Rsvp</a>
-      </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div>
-    <div class="col-md-4 portfolio-item">
-      <a routerLink="/gallery">
-        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-      </a>
-      <h3>
-        <a routerLink="/gallery">Gallery</a>
-      </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div>
-    <div class="col-md-4 portfolio-item">
-      <a routerLink="/registry">
-        <img class="img-responsive" src="http://placehold.it/700x400" alt="">
-      </a>
-      <h3>
-        <a routerLink="/registry">Registry</a>
-      </h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-    </div>
+    <app-boxes class="col-md-4" [destinationName]="'Meet the Bridal Party'" [destinationAddress]="'/bridal-party'"></app-boxes>
+    <app-boxes class="col-md-4" [destinationName]="'Accommodations'" [destinationAddress]="'/accommodations'"></app-boxes>
+    <app-boxes class="col-md-4" [destinationAddress]="'/rsvp'" [destinationName]="'RSVP'"></app-boxes>
   </div>
+  <div class="row">
+    <app-boxes class="col-md-4 col-md-offset-2" [destinationName]="'Gallery'" [destinationAddress]="'/gallery'"></app-boxes>
+   <app-boxes class="col-md-4" [destinationName]="'Registry'" [destinationAddress]="'/registry'"></app-boxes>
+  </div>
+</div>

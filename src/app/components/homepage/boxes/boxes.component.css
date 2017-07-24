@@ -1,0 +1,40 @@
+.item{
+  border: solid white 2px;
+  margin: auto;
+  border-radius: 20px;
+  height:200px;
+
+}
+
+.name{
+  text-decoration: none;
+  font-family: 'Love Ya Like A Sister', cursive;
+  color: white;
+  font-size: 265%;
+  top:25%;
+  position: relative;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+}
+
+
+@media only screen and (max-width: 992px) {
+  .item {
+    border: solid 2px white;
+    max-width: 90%;
+    border-radius: 20px;
+    margin: auto;
+    height:auto;
+  }
+
+  .name{
+    text-decoration: none;
+    font-family: 'Love Ya Like A Sister', cursive;
+    color: white;
+    font-size: 40px;
+    top:25%;
+    position: relative;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+  }
+}
