@@ -20,6 +20,8 @@
   border: solid 2px white;
   border-radius: 20px;
   margin: auto;
+  box-shadow: 3px 3px 1px #aaaaaa;
+
 }
 
 
@@ -29,5 +31,7 @@
     max-width: 90%;
     border-radius: 20px;
     margin: auto;
+    box-shadow: 3px 3px 1px #aaaaaa;
+
   }
 }

@@ -91,12 +91,12 @@ export const bridalParty: [Member] = [
     {
       name: "Ring Bearer: PK Merritt",
       photoUrl: "/assets/images/bridal_party_photos/pk.jpg",
-      aboutParagraph: "PK is the son of Emily's brother Peter and sister-in-law Diana. He is 6  years old and is our favorite nephew."
+      aboutParagraph: "PK is the son of Emily's brother Peter and sister-in-law Diana. He is our favorite nephew."
     },
     {
       name: "Flower Girls: Cassidy and Valerie Merritt",
       photoUrl: "/assets/images/bridal_party_photos/girls.jpg",
-      aboutParagraph: "Cassidy and Valerie (4 and 2) are the daughters of Emily's brother Peter and sister-in-law Diana. They are the cutest pair of sisters that we know and we can't wait for them to take part in our day!"
+      aboutParagraph: "Cassidy and Valerie are the daughters of Emily's brother Peter and sister-in-law Diana. They are the cutest pair of sisters that we know and we can't wait for them to take part in our day!"
     }];
 
 
