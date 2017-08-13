@@ -1,5 +1,11 @@
-<h3>
-  Coming soon
-</h3>
 
-<!--<ngx-gallery [options]="galleryOptions" [images]="galleryImages"></ngx-gallery>-->
+<div class="container">
+  <!--<h1 class="my-4 text-center text-lg-left">Gallery</h1>-->
+  <div class="row text-center text-lg-left">
+    <div class="img col-lg-3 col-md-4 col-sm-6 col-xs-12" *ngFor="let image of images; let i = index">
+      <a href="{{image.src}}" class="d-block mb-4 h-100">
+        <img class="img-fluid img-thumbnail" [src]="image.src" alt="">
+      </a>
+    </div>
+  </div>
+</div>

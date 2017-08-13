@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Member} from "./member/member";
-import {bridalParty} from "../../../assets/bridal-party-members"
+import {bridalParty} from "./bridal-party-members"
 
 
 @Component({

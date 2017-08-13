@@ -18,7 +18,7 @@ import { AccommodationsComponent} from './components/accommodations/accommodatio
 import { RegistryComponent } from './components/registry/registry.component';
 import { MemberComponent } from './components/bridal-party/member/member.component';
 import { BoxesComponent } from './components/homepage/boxes/boxes.component';
-import { NgxGalleryModule } from 'ngx-gallery';
+import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 
 
 
@@ -30,7 +30,6 @@ var firebaseConfig = {
     storageBucket: "weddingwebsite-c22ed.appspot.com",
     messagingSenderId: "473457069419"
   };
-
 
 
 @NgModule({
@@ -56,8 +55,7 @@ var firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    NgxGalleryModule
-  ],
+    BrowserAnimationsModule],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
