@@ -18,6 +18,9 @@ import { AccommodationsComponent} from './components/accommodations/accommodatio
 import { RegistryComponent } from './components/registry/registry.component';
 import { MemberComponent } from './components/bridal-party/member/member.component';
 import { BoxesComponent } from './components/homepage/boxes/boxes.component';
+import { NgxGalleryModule } from 'ngx-gallery';
+
+
 
 var firebaseConfig = {
     apiKey: "AIzaSyBH7AQqaXhHr_AqCV3ZQGz6MPmS12EVrHs",
@@ -52,7 +55,8 @@ var firebaseConfig = {
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    NgxGalleryModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
