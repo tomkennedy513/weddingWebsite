@@ -16,22 +16,27 @@ export class GalleryComponent implements OnInit {
 
   images = [
     {
-      src: '/assets/img/gallery/IMG_0631.JPG',
-      text: 'See Sunset View'
+      src: '/assets/img/gallery/IMG_0631.JPG'
     },
     {
-      src: '/assets/img/gallery/IMG_0632.JPG',
-      text: 'See Sunset View'
+      src: '/assets/img/gallery/IMG_0632.JPG'
     },
     {
-      src: '/assets/img/gallery/IMG_0633.JPG',
-      text: 'See Sunset View'
+      src: '/assets/img/gallery/IMG_0633.JPG'
     },
     {
-      src: '/assets/img/gallery/IMG_0634.JPG',
-      text: 'See Sunset View'
+      src: '/assets/img/gallery/IMG_0634.JPG'
+    },
+    {
+      src: '/assets/img/gallery/IMG_0636.JPG'
+    },
+    {
+      src: '/assets/img/gallery/IMG_0637.JPG'
+    },
+    {
+      src: '/assets/img/gallery/IMG_0638.JPG'
     }
-    ]
+    ];
 
   ngOnInit() {
   }
