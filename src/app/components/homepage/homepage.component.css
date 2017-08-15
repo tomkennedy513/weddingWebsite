@@ -28,10 +28,21 @@ app-boxes{
   width: 100%;
   background-size: cover;
 }
-
 .info{
-  background: url("../../../assets/img/montauk-yacht-club-info.png") no-repeat top;
+  background: url("../../../assets/img/montauk-yacht-club-info-mobile.png") no-repeat top;
   height: 100%;
   width: 100%;
   background-size: cover;
+  
+}
+
+@media (min-width: 1366px ) {
+  .info{
+    background: url("../../../assets/img/montauk-yacht-club-info-desktop.png") no-repeat top;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+
+
+  }
 }
