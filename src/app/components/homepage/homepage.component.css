@@ -1,4 +1,4 @@
-.welcome_image {
+/* .welcome_image {
   margin: 20px 0;
   width: 70%;
   min-width: 300px;
@@ -20,4 +20,18 @@ app-boxes{
   .row {
     margin-bottom: -15px;
   }
+} */
+
+.welcome{
+  background: url("../../../assets/img/welcome_image_new2.jpg") no-repeat top;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+
+.info{
+  background: url("../../../assets/img/montauk-yacht-club.jpg") no-repeat top;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
 }

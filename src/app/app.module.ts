@@ -19,6 +19,7 @@ import { RegistryComponent } from './components/registry/registry.component';
 import { MemberComponent } from './components/bridal-party/member/member.component';
 import { BoxesComponent } from './components/homepage/boxes/boxes.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
+import {MnFullpageModule} from "ngx-fullpage";
 
 
 
@@ -55,7 +56,9 @@ var firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    BrowserAnimationsModule],
+    BrowserAnimationsModule,
+    MnFullpageModule.forRoot()
+    ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
