@@ -1,23 +1,24 @@
-.welcome_image {
-  margin: 20px 0;
-  width: 70%;
-  min-width: 300px;
-  max-width: 700px;
-  border-radius: 20px;
+.welcome{
+  background: url("../../../assets/img/welcome_image_info.jpg") no-repeat top;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+}
+.info{
+  background: url("../../../assets/img/montauk-yacht-club-info-mobile.png") no-repeat top;
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  
 }
 
-app-boxes{
-  align-content: center;
-  text-align: center;
-}
-
-.row{
-  margin-bottom: 15px;
-}
+@media (min-width: 1366px ) {
+  .info{
+    background: url("../../../assets/img/montauk-yacht-club-info-desktop.png") no-repeat top;
+    background-size: cover;
+    height: 100%;
+    width: 100%;
 
 
-@media only screen and (max-width: 992px) {
-  .row {
-    margin-bottom: -15px;
   }
 }
