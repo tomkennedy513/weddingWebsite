@@ -1,5 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {MnFullpageService, MnFullpageOptions, MnFullpageDirective} from "ngx-fullpage"
+import {Component, OnInit} from '@angular/core';
 
 
 @Component({
@@ -9,16 +8,9 @@ import {MnFullpageService, MnFullpageOptions, MnFullpageDirective} from "ngx-ful
 })
 export class HomepageComponent implements OnInit {
 
-  constructor(private fullpageService: MnFullpageService) { }
+  constructor() { }
 
   ngOnInit() {
   }
 
-  @Input() public options:MnFullpageOptions = new MnFullpageOptions({
-    keyboardScrolling: true,
-    css3: true,
-    scrollbar: true
-
-
-  });
 }

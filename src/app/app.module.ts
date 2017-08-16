@@ -47,11 +47,8 @@ var firebaseConfig = {
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule,
-    BrowserAnimationsModule,
-    MnFullpageModule.forRoot()
-    ],
-  providers: [appRoutingProviders, MnFullpageService],
+    AngularFireAuthModule],
+  providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
