@@ -7,19 +7,15 @@ import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AppComponent } from './app.component';
 import {routing, appRoutingProviders} from './app.routing';
-import { HeaderComponent } from './components/homepage/header/header.component';
-import { CountdownComponent } from './components/homepage/countdown/countdown.component';
 import { HomepageComponent } from './components/homepage/homepage.component';
-import { LocationComponent } from './components/homepage/location/location.component';
 import { RsvpComponent } from './components/rsvp/rsvp.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { BridalPartyComponent } from './components/bridal-party/bridal-party.component';
 import { AccommodationsComponent} from './components/accommodations/accommodations.component';
 import { RegistryComponent } from './components/registry/registry.component';
 import { MemberComponent } from './components/bridal-party/member/member.component';
-import { BoxesComponent } from './components/homepage/boxes/boxes.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {MnFullpageModule} from "ngx-fullpage";
+import {MnFullpageDirective, MnFullpageModule, MnFullpageService} from "ngx-fullpage";
 
 
 
@@ -36,17 +32,13 @@ var firebaseConfig = {
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    CountdownComponent,
     HomepageComponent,
-    LocationComponent,
     RsvpComponent,
     GalleryComponent,
     BridalPartyComponent,
     AccommodationsComponent,
     RegistryComponent,
-    MemberComponent,
-    BoxesComponent
+    MemberComponent
   ],
   imports: [
     BrowserModule,
@@ -59,7 +51,7 @@ var firebaseConfig = {
     BrowserAnimationsModule,
     MnFullpageModule.forRoot()
     ],
-  providers: [appRoutingProviders],
+  providers: [appRoutingProviders, MnFullpageService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
