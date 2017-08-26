@@ -1,8 +1,23 @@
-.center-block{
+
+
+.col-xs-12 {
+  align-content: center;
   text-align: center;
-  margin-left: auto;
-  margin-right: auto;
-  display: block;
+}
+
+
+.about{
+  font-size: medium;
+  font-family: 'Open Sans', sans-serif;
+  width: 75%;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 .picture {
   border-radius: 50%;
@@ -13,32 +28,11 @@
   margin-right: 15px;
 }
 
-.col-xs-12 {
-  align-content: center;
-  text-align: center;
-}
-.name {
-  width: 100%;
-  display: flex;
-}
-
-.about{
-  font-size: medium;
-}
-
-
-p {
-  font-family: 'Open Sans', sans-serif;
-}
 
 h1, h2, h3 {
   font-family: 'Pacifico', cursive;
 
 }
 
-@media only screen and (max-width: 992px) {
-  .name{
-    display: block;
-  }
-}
+
 

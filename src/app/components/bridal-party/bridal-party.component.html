@@ -6,7 +6,8 @@
   <li><a routerLink="/rsvp">RSVP</a></li>
 </ul>
 <br>
-<div class="container">
+<div class="flex-container">
   <app-member *ngFor="let member of bridalPartyMembers" [name]="member.name" [photoUrl]="member.photoUrl" [aboutParagraph]="member.aboutParagraph"></app-member>
+  
 </div>
 
