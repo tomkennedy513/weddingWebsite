@@ -1,3 +1,4 @@
+
 h1, h2, h3 {
   font-family: 'Pacifico', cursive;
 
@@ -7,7 +8,7 @@ h1, h2, h3 {
   align-content: center;
   text-align: center;
 }
-
+/* 
 ul {
   list-style-type: none;
   margin: 0;
@@ -30,21 +31,21 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+/* li a:hover {
   background-color: #aaaaaa;
-}
+} */
 
 /*.active {*/
 /*background-color: #4CAF50;*/
 /*}*/
 
-@media (max-width: 620px) {
+/* @media (max-width: 620px) {
   li{
     font-size: 75%;
   }
   li a{
     padding: 5px 8px;
 
-  }
+  } */
 
-}
+ 

@@ -15,7 +15,7 @@ import { AccommodationsComponent} from './components/accommodations/accommodatio
 import { RegistryComponent } from './components/registry/registry.component';
 import { MemberComponent } from './components/bridal-party/member/member.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import {MnFullpageDirective, MnFullpageModule, MnFullpageService} from "ngx-fullpage";
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 
 
@@ -38,7 +38,8 @@ var firebaseConfig = {
     BridalPartyComponent,
     AccommodationsComponent,
     RegistryComponent,
-    MemberComponent
+    MemberComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

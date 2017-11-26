@@ -15,20 +15,3 @@ body, *{
   color: white;
   text-align: center;
 }
-
-html, body{
-  height: 100%;
-  margin: 0;
-}
-
-.navbar {
-  padding: 0;
-
-}
-.navbar-toggler{
-  margin-top: 5px;
-}
-
-.navbar-toggler-icon {
-  background-image: url("assets/Hamburger_icon.svg.png");
-}

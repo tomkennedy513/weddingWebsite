@@ -1,71 +1,27 @@
-body, html{
-  width: 100%;
-  height: 100%;
-  background-color: #aaaaaa;
+.details {
+  background-image:url("/assets/img/montauk-yacht-club-info-mobile.png");
+  height:100vh;
+  background-size:cover;
+  background-position:top;
+  background-repeat:no-repeat;
+  
 }
 
-.welcome{
-  background: url("../../../assets/img/welcome_image_info.jpg") no-repeat top;
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-}
-.info{
-  background: url("../../../assets/img/montauk-yacht-club-info-mobile.png") no-repeat top;
-  height: 100%;
-  width: 100%;
-  background-size: cover;
-
-}
-
-@media (min-width: 1366px ) {
-  .info{
-    background: url("../../../assets/img/montauk-yacht-club-info-desktop.png") no-repeat top;
-    background-size: cover;
-    height: 100%;
-    width: 100%;
-
-
+@media (min-width:1366px) {
+  .details {
+    background-image:url("/assets/img/montauk-yacht-club-info-desktop.png");
+    height:100vh;
+    background-size:cover;
+    background-position:top;
+    background-repeat:no-repeat;
+    
   }
 }
 
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-li {
-  float: left;
-  font-size: 125%;
-
-}
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-/* Change the link color to #111 (black) on hover */
-li a:hover {
-  background-color: #aaaaaa;
-}
-
-/*.active {*/
-  /*background-color: #4CAF50;*/
-/*}*/
-
-@media (max-width: 620px) {
-  li{
-    font-size: 75%;
-  }
-  li a{
-    padding: 5px 8px;
-
-  }
-
+.welcome {
+  background-image:url("/assets/img/welcome_image_info.jpg");
+  background-size:cover;
+  height:100vh;
+  background-position:center;
+  background-repeat:no-repeat;
 }
