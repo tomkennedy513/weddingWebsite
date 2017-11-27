@@ -1,0 +1,12 @@
+<div class="row">
+  <div class="col">
+      <h1 class="text-center">{{name}}</h1>
+      <img src="{{photoUrl}}" class="img-fluid" />
+      <br />
+      <button (click)="handlePhoneClick()" class="btn btn-dark" type="button">{{phone}}</button>    
+      <button (click)="handleWebClick()" class="btn btn-dark" type="button">Visit Their Website</button>      
+      <button (click)="handleMapClick()" class="btn btn-dark" type="button">Show Map</button>
+      <br />
+      <p class="text-center d-inline-block">{{aboutParagraph}}</p>
+  </div>
+</div>

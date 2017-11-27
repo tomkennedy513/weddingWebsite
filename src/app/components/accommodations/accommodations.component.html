@@ -1,5 +1,11 @@
 <app-navbar></app-navbar>
 <br>
-<h3>
-Coming soon
-</h3>
+<div class="container">
+    <app-accommodation-info *ngFor="let accommodation of accommodations" 
+    [name]="accommodation.name" 
+    [address]="accommodation.address"
+    [phone]="accommodation.phone"
+    [aboutParagraph]="accommodation.aboutParagraph" 
+    [photoUrl]="accommodation.photoUrl"
+    [website]="accommodation.website"></app-accommodation-info>
+</div>

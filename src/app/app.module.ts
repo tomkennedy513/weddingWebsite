@@ -16,7 +16,7 @@ import { RegistryComponent } from './components/registry/registry.component';
 import { MemberComponent } from './components/bridal-party/member/member.component';
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { NavbarComponent } from './components/navbar/navbar.component';
-
+import { AccommodationInfoComponent } from './components/accommodations/accommodation-info/accommodation-info.component';
 
 
 var firebaseConfig = {
@@ -39,7 +39,8 @@ var firebaseConfig = {
     AccommodationsComponent,
     RegistryComponent,
     MemberComponent,
-    NavbarComponent
+    NavbarComponent,
+    AccommodationInfoComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +49,8 @@ var firebaseConfig = {
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule],
+    AngularFireAuthModule
+  ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
 })
