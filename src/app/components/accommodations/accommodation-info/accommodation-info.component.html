@@ -8,5 +8,7 @@
       <button (click)="handleMapClick()" class="btn btn-dark" type="button">Show Map</button>
       <br />
       <p class="text-center d-inline-block">{{aboutParagraph}}</p>
+      <br />
+      <p *ngIf="blocked" class="text-center d-inline-block "><em>* We have rooms blocked here *</em></p>
   </div>
 </div>

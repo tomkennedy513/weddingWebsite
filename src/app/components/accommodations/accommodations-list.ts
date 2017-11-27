@@ -52,4 +52,4 @@ export const accommodations: [Accommodation] = [
         phone:"",
         website:""
     }
-
+]
