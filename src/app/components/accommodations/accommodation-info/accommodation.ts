@@ -7,4 +7,5 @@ export class Accommodation{
     address: string;
     phone: string;
     website: string;
+    blocked: boolean;
 }

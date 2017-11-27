@@ -4,10 +4,11 @@ import { EncodeURIComponentPipe } from 'angular-pipes/src/string/encode-uri-comp
 export const accommodations: [Accommodation] = [
     {
         name: "Tom Kennedy",
-        photoUrl: "/assets/img/bridal_party_photos/mark.jpg",
-        aboutParagraph: "Test",
+        photoUrl: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Montauk_Manor.jpg/1200px-Montauk_Manor.jpg",
+        aboutParagraph: "Test test",
         address: "96 Gail Ct, 11731",
         phone: "631-707-4771",
-        website: "http://google.com"
+        website: "http://google.com",
+        blocked: true
     }
 ]

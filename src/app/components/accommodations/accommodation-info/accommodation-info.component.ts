@@ -12,8 +12,8 @@ export class AccommodationInfoComponent implements OnInit {
   @Input() address: string;
   @Input() phone: string;
   @Input() website: string;
-  mapAddress: string;
-  showMap: boolean = false;
+  @Input() blocked: boolean;
+  
   constructor() { 
   }
 
