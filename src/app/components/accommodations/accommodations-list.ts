@@ -55,7 +55,7 @@ export const accommodations: [Accommodation] = [
         aboutParagraph:"",
         address:"",
         phone:"",
-        website:"",
+        website:"https://www.airbnb.com/s/Montauk--NY--United-States/all?place_id=ChIJ9w76UFKr6IkRT2G_wWK3LgE&refinement_path=%2Ffor_you",
         blocked: false
     }
 ]
