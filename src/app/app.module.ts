@@ -19,7 +19,7 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { AccommodationInfoComponent } from './components/accommodations/accommodation-info/accommodation-info.component';
 
 
-var firebaseConfig = {
+const firebaseConfig = {
     apiKey: "AIzaSyBH7AQqaXhHr_AqCV3ZQGz6MPmS12EVrHs",
     authDomain: "weddingwebsite-c22ed.firebaseapp.com",
     databaseURL: "https://weddingwebsite-c22ed.firebaseio.com",
