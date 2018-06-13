@@ -1,6 +1,6 @@
 import { Accommodation } from "app/components/accommodations/accommodation-info/accommodation";
 
-export const accommodations: [Accommodation] = [
+export const accommodations: Accommodation[] = [
 
     {
         name: "The Montauk Yacht Club",

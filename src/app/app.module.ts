@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
@@ -17,6 +17,7 @@ import { MemberComponent } from './components/bridal-party/member/member.compone
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AccommodationInfoComponent } from './components/accommodations/accommodation-info/accommodation-info.component';
+import { RsvpFormComponent } from './components/rsvp/rsvp-form/rsvp-form.component';
 
 
 const firebaseConfig = {
@@ -40,7 +41,8 @@ const firebaseConfig = {
     RegistryComponent,
     MemberComponent,
     NavbarComponent,
-    AccommodationInfoComponent
+    AccommodationInfoComponent,
+    RsvpFormComponent
   ],
   imports: [
     BrowserModule,
@@ -49,7 +51,8 @@ const firebaseConfig = {
     routing,
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    ReactiveFormsModule
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]

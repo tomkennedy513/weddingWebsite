@@ -2,11 +2,11 @@ import {Member} from './member/member';
 /**
  * Created by tk on 7/20/17.
  */
-export const bridalParty: [Member] = [
+export const bridalParty: Member[] = [
     {
-        name: "Maid of Honor: Emma Harrs",
-        photoUrl: "/assets/img/bridal_party_photos/emma.jpg",
-        aboutParagraph: "Emma has been by my side from the very beginning. We met at Little Sparrows Preschool when we were 3 years old and have been inseparable ever since. From awkward middle school years and high school parties to attending Villanova together and even joining the same sorority, Emma and I have been soul sisters for over 20 years. I truly would not be the person I am today if I hadn’t gone through life with Emma by my side. We have been talking about being each other's Maid of Honor since we were 12 and I couldn’t be more thrilled that that time has come!"
+      name: "Maid of Honor: Emma Harrs",
+      photoUrl: "/assets/img/bridal_party_photos/emma.jpg",
+      aboutParagraph: "Emma has been by my side from the very beginning. We met at Little Sparrows Preschool when we were 3 years old and have been inseparable ever since. From awkward middle school years and high school parties to attending Villanova together and even joining the same sorority, Emma and I have been soul sisters for over 20 years. I truly would not be the person I am today if I hadn’t gone through life with Emma by my side. We have been talking about being each other's Maid of Honor since we were 12 and I couldn’t be more thrilled that that time has come!"
     },
     {
       name: "Best Man: Pete Kennedy",
@@ -14,9 +14,9 @@ export const bridalParty: [Member] = [
       aboutParagraph: "Pete is my not so little, litte brother. While in many ways we are complete polar opposites of eachother, we still find a way to get a long and balance each other out. It has been an honor to watch Pete grow up and I am so proud of the man he has become."
     },
     {
-        name: "Bridesmaid: Kirstie Walker",
-        photoUrl: "/assets/img/bridal_party_photos/Kirstie.jpg",
-        aboutParagraph: "Kirstie AKA “cuzcuz” is so much more than just my cousin. She is a best friend, a confidant, and a sister to me. For the first 14 years of my life Kirstie was someone that lived far far away that I saw once a year. However, once she moved back up to NY from Florida, we quickly realized how similar we were and have been inseparable ever since. I am so grateful that she made that move so many years ago and has became such a big part of my life. Even though she is a cat person, I love her to death and I am so excited to have her in my wedding!"
+      name: "Bridesmaid: Kirstie Walker",
+      photoUrl: "/assets/img/bridal_party_photos/Kirstie.jpg",
+      aboutParagraph: "Kirstie AKA “cuzcuz” is so much more than just my cousin. She is a best friend, a confidant, and a sister to me. For the first 14 years of my life Kirstie was someone that lived far far away that I saw once a year. However, once she moved back up to NY from Florida, we quickly realized how similar we were and have been inseparable ever since. I am so grateful that she made that move so many years ago and has became such a big part of my life. Even though she is a cat person, I love her to death and I am so excited to have her in my wedding!"
     },
     {
       name: "Groomsman: Mark Kennedy",
@@ -98,5 +98,4 @@ export const bridalParty: [Member] = [
       photoUrl: "/assets/img/bridal_party_photos/girls.jpg",
       aboutParagraph: "Cassidy and Valerie are the daughters of Emily's brother Peter and sister-in-law Diana. They are the cutest pair of sisters that we know and we can't wait for them to take part in our day!"
     }];
-
 

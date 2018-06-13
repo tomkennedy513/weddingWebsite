@@ -9,7 +9,7 @@ import {bridalParty} from "./bridal-party-members"
   styleUrls: ['./bridal-party.component.css']
 })
 export class BridalPartyComponent implements OnInit {
-  bridalPartyMembers : [Member];
+  bridalPartyMembers : Member[];
   constructor() {
     this.bridalPartyMembers = bridalParty;
   }

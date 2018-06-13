@@ -3,7 +3,7 @@
  */
 
 export class Member{
-  name : string;
+  name: string;
   photoUrl: string;
   aboutParagraph: string;
 }

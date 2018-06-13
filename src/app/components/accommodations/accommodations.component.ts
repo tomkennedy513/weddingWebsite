@@ -9,7 +9,7 @@ import { accommodations } from 'app/components/accommodations/accommodations-lis
 })
 export class AccommodationsComponent implements OnInit {
   
-  accommodations: [Accommodation]
+  accommodations: Accommodation[];
   constructor() {
     this.accommodations = accommodations;
    }

@@ -1,0 +1,15 @@
+<form [formGroup]="form">
+  <div formArrayName="names" class="well well-lg">
+    <div *ngFor="let name of names.controls; let i=index" [formGroupName]="i">
+      <div style="margin-left: 1em;">
+        <div class="form-group">
+          <label class="center-block">Name:
+            <input class="form-control" formControlName="names">
+            <button (click)="addNewRow()" type="button">Add a Secret Lair</button>
+          </label>
+        </div>
+      </div>
+    </div>
+    <button (click)="addNewRow()" type="button">Add a Secret Lair</button>
+  </div>
+</form>
