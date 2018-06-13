@@ -5,11 +5,11 @@
         <div class="form-group">
           <label class="center-block">Name:
             <input class="form-control" formControlName="names">
-            <button (click)="addNewRow()" type="button">Add a Secret Lair</button>
+            <button (click)="removeRow(i, names.length)" type="button">Remove Name</button>
           </label>
         </div>
       </div>
     </div>
-    <button (click)="addNewRow()" type="button">Add a Secret Lair</button>
+    <button (click)="addNewRow()" type="button">Add Name</button>
   </div>
 </form>

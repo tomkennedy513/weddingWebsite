@@ -31,4 +31,10 @@ export class RsvpFormComponent implements OnInit {
   addNewRow() {
     this.names.push(new FormControl('', Validators.required))
   }
+
+  removeRow(i, size) {
+    if(size > 1) {
+      this.names.removeAt(i)
+    }
+  }
 }
