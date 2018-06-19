@@ -1,15 +1,46 @@
-<form [formGroup]="form">
-  <div formArrayName="names" class="well well-lg">
-    <div *ngFor="let name of names.controls; let i=index" [formGroupName]="i">
-      <div style="margin-left: 1em;">
-        <div class="form-group">
-          <label class="center-block">Name:
-            <input class="form-control" formControlName="names">
-            <button (click)="removeRow(i, names.length)" type="button">Remove Name</button>
-          </label>
-        </div>
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div formArrayName="names" class="form-group" *ngFor="let name of names.controls; let i=index">
+      <div class="form-group" [formGroupName]="i">
+        <label>Name:
+          <input class="form-control" formControlName="name">
+          <button (click)="removeRow(i, names.length)" type="button">Remove Name</button>
+          <button (click)="addNewRow()" type="button">Add Name</button>
+
+        </label>
       </div>
-    </div>
-    <button (click)="addNewRow()" type="button">Add Name</button>
   </div>
+  <div class="form-group">
+    <label class="center-block">Email:
+      <input class="form-control" formControlName="email">
+    </label>
+  </div>
+  <div class="form-group radio">
+    <label class="center-block">Will you be attending the Wedding?</label>
+    <label class="center-block"><input type="radio" formControlName="wedding" value="true">Yes</label>
+    <label class="center-block"><input type="radio" formControlName="wedding" value="false">No</label>
+  </div>
+  <div *ngIf="form.value.wedding == 'true'" class="form-group radio">
+    <label class="center-block">Will you be attending the Welcome Cocktails?</label>
+    <label class="center-block"><input type="radio" formControlName="cocktail" value="true">Yes</label>
+    <label class="center-block"><input type="radio" formControlName="cocktail" value="false">No</label>
+  </div>
+  <div *ngIf="form.value.wedding == 'true'" class="form-group radio">
+    <label class="center-block">Will you be attending the Farewell Brunch?</label>
+    <label class="center-block"><input type="radio" formControlName="brunch" value="true">Yes</label>
+    <label class="center-block"><input type="radio" formControlName="brunch" value="false">No</label>
+  </div>
+  <div *ngIf="form.value.wedding == 'true'" class="form-group">
+    <label class="center-block">Where are you staying? (If you have already booked):
+      <input class="form-control" formControlName="accommodations">
+    </label>
+  </div>
+  <div *ngIf="form.value.wedding == 'true'" class="form-group">
+    <label class="center-block">Does anyone in your group have any dietary restrictions?:
+      <input class="form-control" formControlName="allergies">
+    </label>
+  </div>
+  <div>
+    <button type="submit" [disabled]="form.pristine" class="btn btn-success">Save</button>
+  </div>
+  <p>{{submitting}}</p>
 </form>

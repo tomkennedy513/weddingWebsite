@@ -7,14 +7,15 @@ const db = admin.firestore();
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
 exports.helloWorld = functions.https
-  .onRequest((request, response) => {
-    const body = request.body;
-    return db.collection('test').add(body).then(ref => {
+  .onCall((data, context) => {
+    console.log(context);
+    console.log(data);
+    return db.collection('test').add(data).then(ref => {
       console.log('Added document with ID: ', ref.id);
-      return response.json({
+      return {
         id: ref.id,
-        text: body
-      })
+        data: data,
+      }
   });
 });
 

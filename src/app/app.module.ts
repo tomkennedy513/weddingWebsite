@@ -18,6 +18,9 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { AccommodationInfoComponent } from './components/accommodations/accommodation-info/accommodation-info.component';
 import { RsvpFormComponent } from './components/rsvp/rsvp-form/rsvp-form.component';
+import {HttpClientModule} from "@angular/common/http";
+import * as firebase from "firebase";
+
 
 
 const firebaseConfig = {
@@ -28,6 +31,9 @@ const firebaseConfig = {
     storageBucket: "weddingwebsite-c22ed.appspot.com",
     messagingSenderId: "473457069419"
   };
+
+firebase.initializeApp(firebaseConfig);
+const functions = firebase.functions();
 
 
 @NgModule({
@@ -47,12 +53,11 @@ const firebaseConfig = {
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule,
+    HttpClientModule,
     routing,
-    AngularFireModule.initializeApp(firebaseConfig),
     AngularFireDatabaseModule,
     AngularFireAuthModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
   ],
   providers: [appRoutingProviders],
   bootstrap: [AppComponent]
