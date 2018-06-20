@@ -6,11 +6,11 @@ const db = admin.firestore();
 // // Create and Deploy Your First Cloud Functions
 // // https://firebase.google.com/docs/functions/write-firebase-functions
 //
-exports.helloWorld = functions.https
+exports.rsvp = functions.https
   .onCall((data, context) => {
     console.log(context);
     console.log(data);
-    return db.collection('test').add(data).then(ref => {
+    return db.collection('responses').add(data).then(ref => {
       console.log('Added document with ID: ', ref.id);
       return {
         id: ref.id,

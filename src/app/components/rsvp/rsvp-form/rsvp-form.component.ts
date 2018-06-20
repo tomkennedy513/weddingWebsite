@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormControl, Validators, FormBuilder, FormArray} from '@angular/forms';
 import {FormValue} from "./formValue";
 import * as firebase from "firebase";
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-rsvp-form',
@@ -10,13 +11,13 @@ import * as firebase from "firebase";
 })
 export class RsvpFormComponent implements OnInit {
   form: FormGroup;
-  submitting: boolean;
+  submitted: boolean;
+  submissionComplete: boolean;
+  values: FormValue;
 
-
-
-
-
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private router: Router) {
+    this.submitted = false;
+    this.submissionComplete = false;
     this.createForm();
   }
 
@@ -67,7 +68,7 @@ export class RsvpFormComponent implements OnInit {
       brunch = false;
       cocktail = false;
     }
-    const values: FormValue = {
+    this.values = {
       names: names,
       email: email,
       wedding: wedding,
@@ -75,20 +76,22 @@ export class RsvpFormComponent implements OnInit {
       cocktail: cocktail,
       accommodations: accommodations,
       allergies: allergies,
-      response: new Date()
+      response: new Date().toString()
     };
-    this.sendData(values)
+    this.sendData(this.values)
   }
 
    sendData(form: FormValue) {
-     const helloWorld = firebase.functions().httpsCallable('helloWorld');
-     this.submitting = true;
-     helloWorld(form).then(function(result) {
-       // Read result of the Cloud Function.
-       const sanitizedMessage = result;
-       console.log(sanitizedMessage)
-
-       // ...)
+     const rsvp = firebase.functions().httpsCallable('rsvp');
+     this.submitted = true;
+     rsvp(form).then(result => {
+       console.log(result);
+       this.submissionComplete = true;
+       setTimeout(() => {
+         this.router.navigate(['/home'])
+       }, 2000);
+     }).catch(err => {
+       console.log(err)
      });
   };
 

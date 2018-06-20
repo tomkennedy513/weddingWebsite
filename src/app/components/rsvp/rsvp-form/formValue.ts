@@ -6,5 +6,5 @@ export class FormValue {
   cocktail: boolean;
   accommodations: string;
   allergies: string;
-  response: Date;
+  response: string;
 }
