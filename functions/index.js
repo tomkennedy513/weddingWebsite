@@ -3,7 +3,6 @@ const admin = require('firebase-admin');
 admin.initializeApp();
 const db = admin.firestore();
 const sgMail = require('@sendgrid/mail');
-const crypto = require('crypto');
 
 
 // // Create and Deploy Your First Cloud Functions
@@ -16,12 +15,7 @@ exports.rsvp = functions.https
   .onCall((data, context) => {
     console.log(context);
     console.log(data);
-    return db.collection('responses').add(data).then(ref => {
-      console.log('Added document with ID: ', ref.id);
-      return {
-        id: ref.id,
-        data: data}
-  });
+    return db.collection('responses').add(data)
 });
 
 exports.sendmail = functions.https
@@ -32,14 +26,17 @@ exports.sendmail = functions.https
       to: email,
       from: email,
       subject: 'Kennedy Merritt Wedding RSVP',
-      text: JSON.stringify(data)
+      html: '<p>Hi Tom and Emily,<br>' +
+        'You have a new RSVP.</p>' +
+        '<ul style="list-style-type:none">' +
+        `<li>Names: ${data.names.toString()}</li>` +
+        `<li>Wedding: ${data.wedding}</li>` +
+        `<li>Cocktails: ${data.cocktail}</li>` +
+        `<li>Brunch: ${data.brunch}</li>` +
+        `<li>Accommodations: ${data.accommodations}</li>` +
+        `<li>Allergies: ${data.allergies}</li>` +
+        `<li>Message: ${data.message}</li></ul>`
     };
-    sgMail.send(msg).then(res => {
-      console.log(res);
-      return res
-    }).catch(err => {
-      console.log(err);
-      return err
-    })
+    return sgMail.send(msg)
  });
 

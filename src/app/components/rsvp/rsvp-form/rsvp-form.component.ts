@@ -86,20 +86,33 @@ export class RsvpFormComponent implements OnInit {
    sendData(form: FormValue) {
      const rsvp = firebase.functions().httpsCallable('rsvp');
      this.submitted = true;
-     rsvp(form).then(result => {
-       console.log(result);
+     rsvp(form).then(() => {
        this.submissionComplete = true;
+       alert("Reservation Submitted Successfully");
        setTimeout(() => {
          this.router.navigate(['/home'])
-       }, 2000);
+       }, 1000);
      }).catch(err => {
-       console.log(err)
+       console.log(err);
+       alert("There was an error submitting your reservation. Please try again or contact kennedy513@gmail.com")
+       this.submitted = false;
+       this.form.patchValue({
+         names: form.names,
+         wedding: form.wedding.toString(),
+         brunch: form.brunch.toString(),
+         cocktail: form.cocktail.toString(),
+         accommodations: form.accommodations,
+         allergies: form.allergies,
+         message: form.message
+       })
      });
   };
 
   sendMail(form) {
     const mail = firebase.functions().httpsCallable('sendmail');
-    mail(form).catch(err => {
+    mail(form).then(res => {
+      console.log(res)
+    }).catch(err => {
       console.log(err)
     });
   }
