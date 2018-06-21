@@ -27,12 +27,13 @@ export class RsvpFormComponent implements OnInit {
   createForm() {
     this.form = this.fb.group({
       names: this.fb.array([this.createName()]),
-      email: new FormControl('', Validators.required),
       wedding: new FormControl('', Validators.required),
-      brunch: new FormControl('', Validators.required),
-      cocktail: new FormControl('', Validators.required),
+      brunch: '',
+      cocktail: '',
       accommodations: '',
       allergies: '',
+      message: '',
+
     });
   }
 
@@ -58,27 +59,28 @@ export class RsvpFormComponent implements OnInit {
   onSubmit() {
     const formModel = this.form.value;
     const names: string[] = formModel.names.map(e => e.name);
-    const email: string = formModel.email;
     const wedding: boolean = (formModel.wedding === 'true');
     let brunch: boolean = (formModel.brunch === 'true');
     let cocktail: boolean = (formModel.cocktail === 'true');
     const accommodations: string = formModel.accommodations;
     const allergies: string = formModel.allergies;
+    const message: string = formModel.message;
     if (wedding === false) {
       brunch = false;
       cocktail = false;
     }
     this.values = {
       names: names,
-      email: email,
       wedding: wedding,
       brunch: brunch,
       cocktail: cocktail,
       accommodations: accommodations,
       allergies: allergies,
-      response: new Date().toString()
+      response: new Date().toString(),
+      message: message
     };
-    this.sendData(this.values)
+    this.sendData(this.values);
+    this.sendMail(this.values);
   }
 
    sendData(form: FormValue) {
@@ -95,6 +97,11 @@ export class RsvpFormComponent implements OnInit {
      });
   };
 
-
+  sendMail(form) {
+    const mail = firebase.functions().httpsCallable('sendmail');
+    mail(form).catch(err => {
+      console.log(err)
+    });
+  }
 
 }
