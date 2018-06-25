@@ -24,7 +24,7 @@ export const accommodations: Accommodation[] = [
     {
         name: "Snug Harbor Motel and Marina",
         photoUrl: "http://www.atlanticcruisingclub.com/Content/MarinaImages/25-376-5.jpg",
-        aboutParagraph: "A short 5 minute walk from the venue! Our room block will be available for booking in the spring.",
+        aboutParagraph: "A short 5 minute walk from the venue!",
         address: "3 Star Island Rd, Montauk, NY 11954",
         phone: "631-668-2860",
         website: "http://www.montauksnugharbor.com/",
