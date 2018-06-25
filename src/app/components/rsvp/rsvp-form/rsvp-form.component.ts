@@ -80,7 +80,9 @@ export class RsvpFormComponent implements OnInit {
       message: message
     };
     this.sendData(this.values);
+    this.sendData2(this.values);
     this.sendMail(this.values);
+
   }
 
    sendData(form: FormValue) {
@@ -94,7 +96,7 @@ export class RsvpFormComponent implements OnInit {
        }, 1000);
      }).catch(err => {
        console.log(err);
-       alert("There was an error submitting your reservation. Please try again or contact kennedy513@gmail.com")
+       alert("There was an error submitting your reservation. Please try again or contact kennedy513@gmail.com");
        this.submitted = false;
        this.form.patchValue({
          names: form.names,
@@ -117,4 +119,13 @@ export class RsvpFormComponent implements OnInit {
     });
   }
 
+  sendData2(form: FormValue) {
+    const rsvp2 = firebase.functions().httpsCallable('rsvp2');
+    this.submitted = true;
+    rsvp2(form).then(() => {
+      console.log("success")
+    }).catch(err => {
+      console.log(err);
+    });
+  }
 }

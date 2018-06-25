@@ -2,6 +2,7 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 admin.initializeApp();
 const db = admin.firestore();
+const db2 = admin.database();
 const sgMail = require('@sendgrid/mail');
 
 
@@ -40,3 +41,10 @@ exports.sendmail = functions.https
     return sgMail.send(msg)
  });
 
+
+exports.rsvp2 = functions.https
+  .onCall((data, context) => {
+    const ref = db2.ref("wedding/responses");
+    console.log(data);
+    return ref.push(data)
+  });
