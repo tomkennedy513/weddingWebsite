@@ -12,15 +12,18 @@ const sgMail = require('@sendgrid/mail');
 
 
 
-exports.rsvp = functions.https
-  .onCall((data, context) => {
-    console.log(context);
-    console.log(data);
-    return db.collection('responses').add(data)
+exports.rsvpFirestore = functions.https
+  .onCall((data) => {
+    return db.collection('responses').add(data).then(value => {
+      console.log(`wrote data ${value.id}`);
+      return {id: value.id}
+    }).catch(err => {
+      throw new functions.https.HttpsError('internal', err.toString())
+    })
 });
 
 exports.sendmail = functions.https
-  .onCall((data, context) => {
+  .onCall((data) => {
     const email = "kennedy513@gmail.com";
     sgMail.setApiKey('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');
     const msg = {
@@ -38,13 +41,20 @@ exports.sendmail = functions.https
         `<li>Allergies: ${data.allergies}</li>` +
         `<li>Message: ${data.message}</li></ul>`
     };
-    return sgMail.send(msg)
+    return sgMail.send(msg).then(value => {
+      console.log(`sent mail`);
+      return {message: 'success'}
+    }).catch(err => {
+      throw new functions.https.HttpsError('internal', err.toString())
+    })
  });
 
-
-exports.rsvp2 = functions.https
-  .onCall((data, context) => {
-    const ref = db2.ref("wedding/responses");
-    console.log(data);
-    return ref.push(data)
+exports.rsvpRealtime = functions.https
+  .onCall((data) => {
+    return db2.ref("wedding/responses").push(data).then(value => {
+      console.log(`wrote data ${value.id}`);
+      return {id: value.id}
+    }).catch(err => {
+      throw new functions.https.HttpsError('internal', err.toString())
+    });
   });

@@ -79,14 +79,15 @@ export class RsvpFormComponent implements OnInit {
       response: new Date().toString(),
       message: message
     };
-    this.sendData(this.values);
-    this.sendData2(this.values);
-    this.sendMail(this.values);
+    const formValues = this.values;
+    this.sendData(formValues);
+    this.sendData2(formValues);
+    this.sendMail(formValues);
 
   }
 
    sendData(form: FormValue) {
-     const rsvp = firebase.functions().httpsCallable('rsvp');
+     const rsvp = firebase.functions().httpsCallable('rsvpRealtime');
      this.submitted = true;
      rsvp(form).then(() => {
        this.submissionComplete = true;
@@ -96,6 +97,7 @@ export class RsvpFormComponent implements OnInit {
        }, 1000);
      }).catch(err => {
        console.log(err);
+       console.log(form)
        alert("There was an error submitting your reservation. Please try again or contact kennedy513@gmail.com");
        this.submitted = false;
        this.form.patchValue({
@@ -110,22 +112,21 @@ export class RsvpFormComponent implements OnInit {
      });
   };
 
-  sendMail(form) {
+  sendMail(form: FormValue) {
     const mail = firebase.functions().httpsCallable('sendmail');
-    mail(form).then(res => {
-      console.log(res)
-    }).catch(err => {
+    mail(form)
+      .catch(err => {
       console.log(err)
+      console.log(form)
     });
   }
 
   sendData2(form: FormValue) {
-    const rsvp2 = firebase.functions().httpsCallable('rsvp2');
+    const rsvp2 = firebase.functions().httpsCallable('rsvpFirestore');
     this.submitted = true;
-    rsvp2(form).then(() => {
-      console.log("success")
-    }).catch(err => {
-      console.log(err);
+    rsvp2(form).catch(err => {
+        console.log(err);
+        console.log(form)
     });
   }
 }

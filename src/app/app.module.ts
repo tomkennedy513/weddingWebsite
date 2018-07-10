@@ -20,6 +20,8 @@ import { AccommodationInfoComponent } from './components/accommodations/accommod
 import { RsvpFormComponent } from './components/rsvp/rsvp-form/rsvp-form.component';
 import {HttpClientModule} from "@angular/common/http";
 import * as firebase from "firebase";
+import {enableProdMode} from '@angular/core';
+
 
 
 
